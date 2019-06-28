@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Concepts &mdash; stream_depletion 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to the documentation of stream_depletion" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> stream_depletion
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#analytical-solutions-for-constant-pumping-rate">Analytical solutions for constant pumping rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#superposition-principle">Superposition principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Using stream_depletion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">stream_depletion</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Concepts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/concepts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="concepts">
+<span id="id1"></span><h1>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="analytical-solutions-for-constant-pumping-rate">
+<h2>Analytical solutions for constant pumping rate<a class="headerlink" href="#analytical-solutions-for-constant-pumping-rate" title="Permalink to this headline">¶</a></h2>
+<p>This package is entirely based on the analytical solutions as described by
+<a class="reference internal" href="references.html#theis1940" id="id2">[3]</a>, that describe a fully penetrating stream with a perfect hydraulic connection to an
+unconfined aquifer (<a class="reference internal" href="#fig-theis-concept"><span class="std std-numref">Figure 1</span></a>).</p>
+<div class="figure align-default" id="id7" style="width: 70%">
+<span id="fig-theis-concept"></span><img alt="The conceptual model considered by Theis :cite:`Theis1940`." src="_images/theis_concept.png" />
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">The conceptual model considered by Theis <a class="reference internal" href="references.html#theis1940" id="id3">[3]</a>.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>A generalised solution in terms of the complementary error function was developed by <a class="reference internal" href="references.html#glover1954" id="id4">[1]</a>; however, the two
+solutions are identical. The generalised solution as provided by <a class="reference internal" href="references.html#glover1954" id="id5">[1]</a> for estimating stream depletion is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-glover">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-glover" title="Permalink to this equation">¶</a></span>\[\Delta{Q} = erfc\left(\sqrt\frac{S\cdot L^2}{4\cdot T\cdot t}\right) \cdot Q_w\]</div>
+<p>with:</p>
+<div class="math notranslate nohighlight">
+\begin{eqnarray}
+\Delta{Q}&amp; =&amp; \text{stream depletion rate}\ [L^3T^{-1}]\\
+L&amp; =&amp; \text{shortest distance between the pumped bore and the stream}\ [L]\\
+Q_w&amp; =&amp; \text{constant flow rate from the pumped bore}\ [L^3T^{-1}]\\
+T&amp; =&amp; \text{aquifer transmissivity}\ [L^2T^{-1}]\\
+S&amp; =&amp; \text{aquifer storativity, specific yield, or effective porosity}\ [-]\\
+t&amp; = &amp; \text{time since pumping began}\ [T]
+\end{eqnarray}</div></div>
+<div class="section" id="superposition-principle">
+<h2>Superposition principle<a class="headerlink" href="#superposition-principle" title="Permalink to this headline">¶</a></h2>
+<p>As all the equations used are linear and consist of coefficients that do not depend upon time, superposition and time translation can be used.
+That is, the superposition principle allows the solutions for differing time periods to be subtracted to obtain a solution that models both depletion
+due to abstraction and a reducing in depletion due to pumping ceasing (abstraction and recovery) phases of well pumping <a class="reference internal" href="references.html#reilly1984" id="id6">[2]</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the documentation of stream_depletion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Wilco Terink &amp; Matt Smith
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

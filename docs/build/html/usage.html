@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using stream_depletion &mdash; stream_depletion 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> stream_depletion
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using stream_depletion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sdf">sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sd">SD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotsd">plotSD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">stream_depletion</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Using stream_depletion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-stream-depletion">
+<span id="usage"></span><h1>Using stream_depletion<a class="headerlink" href="#using-stream-depletion" title="Permalink to this headline">¶</a></h1>
+<p>After installation, the python package can be executed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">stream_depletion.sd_calc</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>This imports all the functions that you might need for your stream depletion application. The pacakge contains three functions, which are described below.</p>
+<div class="section" id="sdf">
+<h2>sdf<a class="headerlink" href="#sdf" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">sdf</span></code> function calculates the Stream Depletion Factor (SDF). The input and output for this function are shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sdf</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculates Stream Depletion Factor given:</span>
+<span class="sd">        L - Shortest distance from well to stream (m)</span>
+<span class="sd">        S - Storage coefficient (-)</span>
+<span class="sd">        T - Transmissivity (m2/d)</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        y - stream depletion factor</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>This function can for example be called using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SDF</span><span class="o">=</span> <span class="n">sdf</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sd">
+<h2>SD<a class="headerlink" href="#sd" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">SD</span></code> function returns three variables:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The stream depletion rate resulting from pumping at a dynamic rate</p></li>
+<li><p>The stream depletion rate resulting from pumping at a constant rate, where the constant rate is based on the average of the dynamic pumping rate</p></li>
+<li><p>The average pumping rate</p></li>
+</ol>
+</div></blockquote>
+<p>More details are shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">SD</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">Qpump</span><span class="p">):</span>
+ <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1"> Calculates stream depletion effect given:</span>
+<span class="s1">     L - Shortest distance from well to stream (m)</span>
+<span class="s1">     S - Storage coefficient (-)</span>
+<span class="s1">     T - Transmissivity (m2/d)</span>
+<span class="s1">     Qpump - NumPy 1D array with dynamic pumping rates (L/d)</span>
+<span class="s1"> Returns:</span>
+<span class="s1">     sd_matrix - NumPy 1D array with stream depletion rate (L/d) based on dynamic pumping rate Qpump - unit is same as provided in the pumping rate: e.g. if pumping rate is in liters per second, then so is the stream depletion rate</span>
+<span class="s1">     sd_avg - Numpy 1D array with stream depletion rate (L/d) based on continous pumping at the average of pumping rate Qpump</span>
+<span class="s1">     Qavg - average of pumping Qpump (L/d)</span>
+</pre></div>
+</div>
+<p>This function can for example be called using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">sd1</span><span class="p">,</span> <span class="n">sd2</span><span class="p">,</span> <span class="n">qavg</span><span class="p">]</span> <span class="o">=</span> <span class="n">SD</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="n">pumpArray</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotsd">
+<h2>plotSD<a class="headerlink" href="#plotsd" title="Permalink to this headline">¶</a></h2>
+<p>With <code class="docutils literal notranslate"><span class="pre">plotSD</span></code> you can plot the pumping rate and the associated stream depletion rate in one graph and save it as a figure.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plotSD</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">Qpump</span><span class="p">,</span> <span class="n">Qpump_sd</span><span class="p">,</span> <span class="n">QpumpAvg</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">QpumpAvg_sd</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">xlabel_txt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylabel_txt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">title_txt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+ <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"> Plots the dynamic pumping and the associated stream depletion effect in one graph. If provided, then it also plots the average pumping rate with the associated</span>
+<span class="sd"> stream depletion effect. Input:</span>
+<span class="sd">     fname - absolute path to file name of figure to save</span>
+<span class="sd">     Qpump - NumPy 1D array with dynamic pumping rates (L/d)</span>
+<span class="sd">     Qpump_sd - NumPy 1D array with stream depletion rate (L/d) based on dynamic pumping rate Qpump</span>
+<span class="sd">     QpumpAvg - Average pumping rate of Qpump (L/d) (Optional)</span>
+<span class="sd">     QpumpAvg_sd - Numpy 1D array with stream depletion rate (L/d) based on continous pumping at the average of pumping rate Qpump (Optional)</span>
+<span class="sd">     xlabel_txt - string to be plotted as x-axis label</span>
+<span class="sd">     ylabel_txt - string to be plotted as y-axis label</span>
+<span class="sd">     title_txt - string to be plotted as title</span>
+<span class="sd"> &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>This function can for example be called using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotSD</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;c:\myFigure.png&#39;</span><span class="p">,</span> <span class="n">pumpArray</span><span class="p">,</span> <span class="n">sd1</span><span class="p">,</span> <span class="n">qavg</span><span class="p">,</span> <span class="n">sd2</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow [cumecs]&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Stream depletion well A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An example plot is shown below.</p>
+<div class="figure align-default" id="id1" style="width: 70%">
+<span id="fig-example-plot"></span><img alt="Example figure of dynamic pumping rates and associated stream depletion rate." src="_images/example_plot.png" />
+<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Example figure of dynamic pumping rates (blue) and associated stream depletion rate (orange). The black line shows pumping under a constant rate (average of blue line), and the associated
+stream depletion of that (green line).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="references.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Wilco Terink &amp; Matt Smith
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
