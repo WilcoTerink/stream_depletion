@@ -1,6 +1,6 @@
 {% set name = "stream_depletion" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "004d1eb10b159e2617f88a6bbc186e758b4df83351f1882a9bd5ad0aaa4af462" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "cdd7d91eda4eb5b963756bfad381c77c6823ff28e9b8b3c6105cad95f384a8a0" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.

@@ -2,7 +2,7 @@ stream_depletion
 ================
 
 stream_depletion is a Python package that can be used to evaluate the stream depleting effects of pumping
-a well at a rate :math:`Q(t)`.
+a well at a rate Q(t).
 
 Documentation
 -------------
@@ -22,10 +22,10 @@ or via pip::
    pip install stream_depletion
    
    
-Using stream_depletion
-----------------------
+Using the stream depletion package
+----------------------------------
 
-After installation, the python package can be executed by::
+After installation, the functions from the python package can be imported by::
 
    from stream_depletion.sd_calc import *
    

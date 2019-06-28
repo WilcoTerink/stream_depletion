@@ -10,7 +10,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'stream_depletion'
 main_package = 'stream_depletion'
 # datasets = 'datasets'
-version = '1.0.0'
+version = '1.0.2'
 descrip = 'Calculates stream depletion effect of a pumping well using the Jenkins (1968) / Theis (1941) solutions'
 
 

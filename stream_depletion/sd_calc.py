@@ -20,7 +20,7 @@
 #-Authorship information-########################################################################################################################
 __author__ = 'Wilco Terink & Matt Smith'
 __copyright__ = 'Wilco Terink & Matt Smith'
-__version__ = '1.0.0'
+__version__ = '1.0.2'
 __date__ ='June 2019'
 #################################################################################################################################################
 
@@ -57,7 +57,6 @@ def SD(L, S, T, Qpump):
         sd_avg - Numpy 1D array with stream depletion rate (L/d) based on continous pumping at the average of pumping rate Qpump
         Qavg - average of pumping Qpump (L/d)
     '''
-    #Qpump = np.nan_to_num(Qpump)  #-make sure NaNs are replaced by zeros
     Qpump[np.isnan(Qpump)] = 0.
     #-Calculate Stream depletion factor
     SDF = sdf(L,S,T)
